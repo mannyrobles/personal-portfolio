@@ -1,0 +1,22 @@
+//Cards under hero
+.adv-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 260px);
+  grid-template-rows: 1fr 1fr;
+  text-align: center;
+  justify-content: space-around;
+  .whyus-cards {
+    // background-color: tan;
+    border-radius: 1rem;
+    padding: 1rem
+  }
+}
+.wait-cards, .arrived-cards {
+  display: flex;
+}
+
+.ncards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}

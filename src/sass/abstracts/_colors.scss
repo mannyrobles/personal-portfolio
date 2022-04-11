@@ -1,0 +1,23 @@
+@use 'variables';
+
+$colors: (
+  primary: (
+    base: variables.$primary-color,
+    light: lighten(variables.$primary-color, variables.$lighten),
+    dark: darken(variables.$primary-color, variables.$darken),
+  ),
+  ftr: (
+    base: variables.$footer,
+  ),
+  nws: (
+    base: variables.$newsletter,
+  ),
+  btn: (
+    base: variables.$buttons,
+    light: lighten(variables.$buttons, variables.$lighten),
+    dark: darken(variables.$buttons, variables.$darken),
+  ),
+  wht: ( 
+    base: variables.$white,
+  ),
+);

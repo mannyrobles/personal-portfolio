@@ -1,0 +1,76 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// plane take off
+// <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane-departure" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+//    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+//    <path d="M15 12h5a2 2 0 0 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3z" transform="rotate(-15 12 12) translate(0 -1)"></path>
+//    <line x1="3" y1="21" x2="21" y2="21"></line>
+// </svg>
+// //plane landing 
+// <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane-arrival" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+//    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+//    <path d="M15 12h5a2 2 0 0 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3z" transform="rotate(15 12 12) translate(0 -1)"></path>
+//    <line x1="3" y1="21" x2="21" y2="21"></line>
+// </svg>
+.images {
+  display: flex;
+  max-width: 50%;
+  align-items: center;
+  img {
+    border-radius: 20px;
+    margin-right: 1em;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+  }
+  .img-2 {
+    max-height: 450px;
+    opacity: .60;
+  }
+  .img-3 {
+    max-height: 350px;
+    opacity: .60;
+  }
+}
+//svg 
+.svg {
+  @include mixins.svg(3em, 3em, variables.$primary-color, variables.$primary-color);
+}
+.flag-svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+.top {
+  svg {
+    color: rgb(86, 86, 255);
+    height: 2em;
+    width: 2em;
+  }
+}
+.bottom {
+  svg {
+    color: green;
+    height: 2em;
+    width: 2em;
+  }
+}
+.arrows {
+  @include mixins.svg(2em, 2em, variables.$white, variables.$white);
+}
+
+
+// .spacer {
+//   aspect-ratio: 960/300;
+//   width: 100%;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+// }
+
+.hero {
+  background-image: url('../../assets/wave.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}

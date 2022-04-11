@@ -1,0 +1,13 @@
+@use '../abstracts/variables';
+//header
+.t_nav {
+  align-self: flex-end;
+  font-size: 25px;
+  a {
+    padding-right: 2em;
+    color: black;
+  }
+}
+a {
+  text-decoration: none;
+}

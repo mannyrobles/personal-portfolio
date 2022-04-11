@@ -1,0 +1,46 @@
+@use '../abstracts/mixins';
+@use '../abstracts/functions';
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+.button-log, .start {
+  @include mixins.btn(functions.clr(primary),
+    variables.$white,
+    functions.clr(primary, darken),
+    functions.clr(primary),
+  );
+}
+
+.button-hero, .news-btn, .button-create {
+  @include mixins.btn(variables.$white,
+    functions.clr(primary),
+    functions.clr(primary),
+    functions.clr(primary),
+  );
+}
+
+a[href*="#find"] {
+  @include mixins.btn(functions.clr(primary),
+    variables.$white,
+    functions.clr(primary, darken),
+    functions.clr(primary),
+  );
+}
+
+.track-number {
+  @include mixins.btn(functions.clr(primary),
+    variables.$white,
+    functions.clr(primary, darken),
+    functions.clr(primary), $display: inline-block,
+  );
+}
+
+.track-number {
+  @include mixins.svg(1.3em, 1.3em, variables.$white, variables.$white);
+  border-radius: 5px;
+  background-color: variables.$primary-color;
+  svg {
+    display: inline-block;
+    margin: auto;
+  }
+}

@@ -1,0 +1,261 @@
+@use '../abstracts/functions';
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../components/cards';
+//page margin
+.header, .advantages, .hero, .advantages, .flight-schedule, .tracking {
+  @include mixins.page;
+}
+//nav
+.header {
+  display: flex;
+  justify-content: space-between;
+//background-color:tan;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  @include mixins.page {
+    padding-top: 2em;
+  };
+  .links {
+    display: inline-flex;
+    .t_nav {
+      display: flex;
+      align-self: center;
+    }
+  }
+  .logo {
+    font-size: 50px;
+  }
+  .button-wrapper {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+}
+//hero
+.hero {
+  position: relative;
+  display: flex;
+  height: 70vh;
+  background-color: functions.clr(primary);
+  color: variables.$white;
+  .left {
+    width: 38%;
+    h1 {
+      font-size: 4em;
+      padding-top: 1.5em;
+      line-height: 4rem;
+    }
+  }
+  p {
+    padding-top: 1.5em;
+    font-size: 1.3em;
+    padding-right: 6rem;
+  }
+  .button-hero {
+    margin-top: 3rem;
+  }
+}
+// .curve {
+//   position: absolute;
+//   height: 225px;
+//   width: 100%;
+//   bottom: 0;
+//   &::before {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     border-radius: 100% 50%;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #fff;
+//     transform: translate(-10%, 60%);
+//   }
+//   &::after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     border-radius: 100% 50%;
+//     width: 100%;
+//     height: 100%;
+//     transform: translate(-94%, 40%);
+//   }
+// }
+
+//choose us
+.details {
+  margin-top: 1rem;
+  color: grey;
+}
+//schedule
+.otw {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 6rem;
+  h3 {
+    font-size: 3.5rem;
+  }
+}
+//schedule cards
+.top, .bottom {
+  display: flex;
+  justify-content: space-around;
+}
+.send {
+  font-size: 1.75em;
+}
+.num {
+  font-size: 1.25em;
+  color: grey; 
+}
+.arr {
+  font-size: 1.50em;
+}
+.arrows {
+  margin-top: 3rem;
+  margin-left: auto;
+}
+.top {
+  padding-bottom: 2rem;
+}
+.find-button {
+  text-align: center;
+  margin-top: 4rem;
+}
+.icons {
+  margin-right: 1rem;
+  padding-top: 1rem;
+}
+//tracking section
+.tracking {
+  display: flex;
+  height: 75vh;
+  align-items: center;
+  justify-content: center;
+  p {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+  .tracker {
+    width: 500px;
+    margin-left: auto;
+    margin-bottom: 10em;
+    .tracker-nav:nth-child(1) {
+
+    }
+  }
+  .tracking-input {
+    border: none;
+  }
+  .tracker-nav {
+    a {
+      color: black;
+      padding-right: 1.25em;
+      padding-bottom: 2em;
+    }
+  }
+}
+.leading {
+  max-width: 600px;
+  .lead {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+//news
+.news {
+  @include mixins.page;
+  text-align: center;
+  h2 {
+    font-size: 3em;
+  }
+}
+.ncards p {
+  margin-bottom: 1em;
+}
+.title {
+  margin-bottom: 3em;
+}
+.ncards p:first-child {
+  font-weight: bold;
+}
+.news-btn {
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+}
+.nws-button {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.lets-start {
+  background-color: variables.$newsletter;
+  // height: 30vh;
+  color: variables.$white;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  p {
+    font-size: 3.5em;
+  }
+}
+//map
+.map h2 {
+  font-size: 3.5em;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+iframe {
+  margin-bottom: 9rem;
+}
+
+//footer
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer{
+  background: variables.$footer;
+  padding: 50px;
+}
+
+.footer .footer_menu{
+ display: flex;
+ margin-bottom: 25px;
+ justify-content: space-between;
+}
+
+.footer .footer_menu .title{
+ margin-bottom: 10px;
+ color: #adadad;
+}
+
+.footer .footer_menu ul li a{
+ display: block;
+ margin-bottom: 6px;
+ color: #fff;
+}
+
+.footer .footer_menu ul li a:hover{
+ text-decoration: underline;
+}
+
+.footer .partners{
+ margin-bottom: 25px;
+}
+
+.footer .partners ul{
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}

@@ -1,38 +1,16 @@
 @use '../abstracts/variables';
 
 //button styles
-@mixin btn($bg, $txt, $hover, $active, $border: 1px black, $display: inline-block,) {
-  background: $bg;
-  color: $txt;
-  border-radius: 8px;
-  border: $border;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: $display;
-  font-size: 20px;
-  margin: 4px 2px;
-  &:hover {
-    background: $hover;
-    transition: all 0.3s ease;
-  }
-  &:active {
-    background: $active;
-  } 
+@mixin btn() {
+  
 }
 
 //page padding
 @mixin page() {
-  padding-left: 8em;
-  padding-right: 8em;
+  padding-left: 15%;
+  padding-right: 15%;
   @content;
 }
-
-//hero image style 
-@mixin hero-img() {
-  border-radius: 8px;
-}
-//svg style
 @mixin svg($w, $h, $fill, $stroke) {
   @content;
   .svg-icon {
@@ -48,4 +26,9 @@
     stroke: $stroke;
     stroke-width: 1;
   }
+}
+//project img
+@mixin img() {
+  width: 400px;
+  height: 300px;
 }

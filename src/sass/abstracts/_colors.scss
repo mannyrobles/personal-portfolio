@@ -6,18 +6,18 @@ $colors: (
     light: lighten(variables.$primary-color, variables.$lighten),
     dark: darken(variables.$primary-color, variables.$darken),
   ),
-  ftr: (
-    base: variables.$footer,
-  ),
-  nws: (
-    base: variables.$newsletter,
-  ),
-  btn: (
-    base: variables.$buttons,
-    light: lighten(variables.$buttons, variables.$lighten),
-    dark: darken(variables.$buttons, variables.$darken),
-  ),
-  wht: ( 
-    base: variables.$white,
-  ),
+  // ftr: (
+  //   base: variables.$footer,
+  // ),
+  // nws: (
+  //   base: variables.$newsletter,
+  // ),
+  // btn: (
+  //   base: variables.$buttons,
+  //   light: lighten(variables.$buttons, variables.$lighten),
+  //   dark: darken(variables.$buttons, variables.$darken),
+  // ),
+  // wht: ( 
+  //   base: variables.$white,
+  // ),
 );

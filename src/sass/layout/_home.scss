@@ -3,259 +3,332 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 @use '../components/cards';
-//page margin
-.header, .advantages, .hero, .advantages, .flight-schedule, .tracking {
+html {
+  background-color: variables.$primary-color; 
+}
+.header, .hero, label, .work, .services, .skills, .test, .contact {
   @include mixins.page;
 }
-//nav
+.header, .hero, .services, .skills, .skill-percent, .skill-text, .test, .contact {
+  display: flex;
+}
 .header {
+  @include mixins.page;
+  height: 10vh;
+  position: relative;
+  align-items: center;
+}
+.hero {
+  justify-content: space-between;
+  margin-top: 5em;
+  h1 {
+    font-size: 4em;
+    line-height: 5rem;
+  }
+  .hello {
+    color: variables.$accent;
+  }
+}
+.zoro {
+  padding-bottom: 2.5em;
+  width: 50%;
+}
+.intro {
+  width: 400px;
+  .uiux {
+    font-size: 2em;
+  }
+}
+.head-img {
+  
+}
+.bottom-head { 
+  display: block;
+}
+.slide {
+  width: 50%;
+  text-align: right;
+  .selected, .number {
+    display: inline;
+  }
+  .selected {
+    font-size: 4em;
+    color: variables.$accent;
+  }
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+label {
+ text-align: center;
+ padding: 0;
+ margin: 0;
+}
+.aboutme1 {
+  @include mixins.page;
+  display: flex;
+  // justify-content: space-around;
+}
+.head {
+  width: 600px;
+  padding-bottom: 1.5em;
+  h2 {
+    font-size: 2em;
+  }
+  .disc {
+    font-size: 1.2em;
+    padding-bottom: .8em;
+  }
+  span {
+    color: variables.$accent;
+  }
+  .bio {
+    color: grey;
+  }
+}
+.info {
   display: flex;
   justify-content: space-between;
-//background-color:tan;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  @include mixins.page {
-    padding-top: 2em;
-  };
-  .links {
-    display: inline-flex;
-    .t_nav {
-      display: flex;
-      align-self: center;
-    }
-  }
-  .logo {
-    font-size: 50px;
-  }
-  .button-wrapper {
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-  }
-}
-//hero
-.hero {
-  position: relative;
-  display: flex;
-  height: 70vh;
-  background-color: functions.clr(primary);
-  color: variables.$white;
-  .left {
-    width: 38%;
-    h1 {
-      font-size: 4em;
-      padding-top: 1.5em;
-      line-height: 4rem;
-    }
-  }
-  p {
-    padding-top: 1.5em;
-    font-size: 1.3em;
-    padding-right: 6rem;
-  }
-  .button-hero {
-    margin-top: 3rem;
-  }
-}
-// .curve {
-//   position: absolute;
-//   height: 225px;
-//   width: 100%;
-//   bottom: 0;
-//   &::before {
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     border-radius: 100% 50%;
-//     width: 100%;
-//     height: 100%;
-//     background-color: #fff;
-//     transform: translate(-10%, 60%);
-//   }
-//   &::after {
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     border-radius: 100% 50%;
-//     width: 100%;
-//     height: 100%;
-//     transform: translate(-94%, 40%);
-//   }
-// }
-
-//choose us
-.details {
-  margin-top: 1rem;
-  color: grey;
-}
-//schedule
-.otw {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-.h3 {
-  text-align: center;
-  font-size: 1.5rem;
-  padding-bottom: 6rem;
-  h3 {
-    font-size: 3.5rem;
-  }
-}
-//schedule cards
-.top, .bottom {
-  display: flex;
-  justify-content: space-around;
-}
-.send {
-  font-size: 1.75em;
-}
-.num {
-  font-size: 1.25em;
-  color: grey; 
-}
-.arr {
-  font-size: 1.50em;
-}
-.arrows {
-  margin-top: 3rem;
-  margin-left: auto;
-}
-.top {
-  padding-bottom: 2rem;
-}
-.find-button {
-  text-align: center;
-  margin-top: 4rem;
-}
-.icons {
-  margin-right: 1rem;
-  padding-top: 1rem;
-}
-//tracking section
-.tracking {
-  display: flex;
-  height: 75vh;
-  align-items: center;
-  justify-content: center;
-  p {
-    padding-top: 2em;
+  max-width: 600px;
+  padding-bottom: 2em;
+  li {
     padding-bottom: 1em;
   }
-  .tracker {
-    width: 500px;
-    margin-left: auto;
-    margin-bottom: 10em;
-    .tracker-nav:nth-child(1) {
-
-    }
+  .list {
+    display: inline-block;
+    min-width: 120px;
   }
-  .tracking-input {
-    border: none;
-  }
-  .tracker-nav {
-    a {
-      color: black;
-      padding-right: 1.25em;
-      padding-bottom: 2em;
-    }
+  .fact {
+    display: inline-block;
+    padding-left: 1em;
+    color: grey;
   }
 }
-.leading {
-  max-width: 600px;
-  .lead {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.about {
+  padding-left: 4em;
+}
+// port
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2em 0;
+}
+.port {
+text-align: center;
+padding-bottom: 3em;
+display: block;
+  li {
+    display: inline;
+    padding-right: 2.7em;
   }
 }
-//news
-.news {
-  @include mixins.page;
+//serv
+.services {
+  display: flex;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr;
   text-align: center;
-  h2 {
-    font-size: 3em;
-  }
+  grid-gap: 1em 1em;
 }
-.ncards p {
-  margin-bottom: 1em;
-}
-.title {
-  margin-bottom: 3em;
-}
-.ncards p:first-child {
-  font-weight: bold;
-}
-.news-btn {
+
+.card {
+  // width: 500px;
+  height: 250px;
+  background-color: variables.$color-3;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  align-content: center;
-  align-self: center;
-}
-.nws-button {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.lets-start {
-  background-color: variables.$newsletter;
-  // height: 30vh;
-  color: variables.$white;
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  align-items: center;
+  padding-left: 3em;
+  padding-right: 3em;
+  h3 {
+    padding-bottom: 1em;
+  }
   p {
-    font-size: 3.5em;
+    color: grey;
   }
 }
-//map
-.map h2 {
-  font-size: 3.5em;
+//skills 
+.skills {
+  justify-content: space-between;
+  .skill-bio {
+    width: 40%;
+    text-align: left;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h3, p {
+    padding-bottom: 1em;
+  }
+  p {
+    color: grey;
+  }
+}
+.skill-percent {
+  width: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  p {
+    display: inline;
+  }
+}
+.skill-text {
+  justify-content: space-between;
+}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: rgb(58, 58, 58); /* Grey background */
+}
+
+.skills {
+  padding-bottom: 4px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 95%; background-color: variables.$accent;} /* Green */
+.css {width: 80%; background-color: variables.$accent;} /* Blue */
+.js {width: 65%; background-color: variables.$accent;} /* Red */
+.php {width: 60%; background-color: variables.$accent;} /* Dark Grey */
+//quote
+.test {
+  flex-direction: column;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  justify-content: center;
 }
-iframe {
-  margin-bottom: 9rem;
+.quote-wrapper {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+  p {
+    color: grey;
+  }
 }
-
-//footer
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.who-wrapper {
+  p {
+    color: grey;
+    padding-bottom: .5em;
+  }
+  span {
+    color: variables.$accent;
+  }
+  input {
+    accent-color: variables.$accent;
+  }
 }
-
-.footer{
-  background: variables.$footer;
-  padding: 50px;
+.contact {
+  // display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-.footer .footer_menu{
- display: flex;
- margin-bottom: 25px;
- justify-content: space-between;
-}
-
-.footer .footer_menu .title{
- margin-bottom: 10px;
- color: #adadad;
-}
-
-.footer .footer_menu ul li a{
- display: block;
- margin-bottom: 6px;
- color: #fff;
+.touch {
+  display: inline;
+  width: 35%;
 }
 
-.footer .footer_menu ul li a:hover{
- text-decoration: underline;
-}
+form {
+  //input
+  /* form starting stylings ------------------------------- */
+  .group 			  {
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+    margin-bottom:45px; 
+  }
+  input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    // display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus 		{ outline:none; }
 
-.footer .partners{
- margin-bottom: 25px;
-}
+  /* LABEL ======================================= */
+  label 				 {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
 
-.footer .partners ul{
- display: flex;
- justify-content: center;
- flex-wrap: wrap;
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:300px; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
 }
+//done

@@ -1,14 +1,21 @@
 @use '../abstracts/variables';
 
 //button styles
-@mixin btn() {
-  
+@mixin bttn() {
+  @content;
+  border: 1px solid variables.$accent;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 //page padding
 @mixin page() {
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 15vw;
+  padding-right: 15vw;
   @content;
 }
 @mixin svg($w, $h, $fill, $stroke) {
@@ -31,4 +38,19 @@
 @mixin img() {
   width: 400px;
   height: 300px;
+}
+
+// breakpoints
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
 }

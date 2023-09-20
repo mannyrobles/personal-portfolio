@@ -1,0 +1,29 @@
+@use '../abstracts/_variables';
+
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr;
+  text-align: center;
+  grid-gap: 1em 1em;
+}
+
+.card {
+  // width: 500px;
+  height: 250px;
+  background-color: variables.$color-3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3em;
+  padding-right: 3em;
+  h3 {
+    padding-bottom: 1em;
+  }
+  p {
+    color: grey;
+  }
+}

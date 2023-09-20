@@ -8,8 +8,10 @@ $white: #fff;
 //color function
 $lighten: 10;
 $darken: 30;
-//font sizes
 
-//display
-$f: flex;
-$g: grid;
+// breakpoints
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;

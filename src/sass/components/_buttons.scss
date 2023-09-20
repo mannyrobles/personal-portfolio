@@ -1,14 +1,37 @@
-@use '../abstracts/mixins';
 @use '../abstracts/functions';
-@use '../abstracts/variables';
 @use '../abstracts/colors';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../components/cards';
+
+// top buttons
 
 .download, .message-me {
-  border: 1px solid variables.$accent;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  @include mixins.bttn;
+}
+
+
+
+// submit button
+.button-area{
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  button{
+    color: #fff;
+    border: 1px solid variables.$accent;
+    font-size: 18px;
+  cursor:pointer;
+    padding: 13px 25px;
+    background: variables.$primary-color;
+    transition: background 0.3s ease;
+    }
+  button:hover{
+      background: #360d0d;
+    }
+  span{
+    font-size: 17px;
+    margin-left: 30px;
+    display: none;
+  }
 }

@@ -1,3 +1,35 @@
+.logo {
+  background-image: url("../../assets/MANNYBOULPFP.png");
+  background-size: contain;
+  background-position: center;
+  height: 40px;
+  width: 200px;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+.head-shot {
+  display: block;
+  background-image: url("../../assets/zoro-pic.png");
+  background-size: contain;
+  background-position: center;
+  height: 500px;
+  width: 400px;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+.projects img {
+  width: 400px;
+  height: 300px;
+}
+
+.head-img {
+  height: 200px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -23,6 +55,173 @@
   color: grey;
 }
 
+html {
+  background-color: #100E0E;
+}
+
+.header, .hero, label, .work, .services, .skills, .test, .contact {
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+
+.header, .hero, .services, .skills, .skill-percent, .skill-text, .test, .contact {
+  display: flex;
+}
+
+.header {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  height: 10vh;
+  position: relative;
+  align-items: center;
+}
+
+.hero {
+  justify-content: left;
+  margin-top: 5em;
+}
+.hero h1 {
+  font-size: 4em;
+  line-height: 5rem;
+}
+.hero .hello {
+  color: #FF3F3F;
+}
+
+.zoro {
+  padding-bottom: 2.5em;
+  width: 100%;
+}
+
+.bottom-head {
+  display: block;
+}
+
+.slide {
+  width: 50%;
+  text-align: right;
+}
+.slide .selected, .slide .number {
+  display: inline;
+}
+.slide .selected {
+  font-size: 4em;
+  color: #FF3F3F;
+}
+.slide .arrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutme1 {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  display: flex;
+  justify-content: right;
+}
+
+.head {
+  width: 600px;
+  padding-bottom: 1.5em;
+}
+.head h2 {
+  font-size: 2em;
+}
+.head .disc {
+  font-size: 1.2em;
+  padding-bottom: 0.8em;
+}
+.head span {
+  color: #FF3F3F;
+}
+.head .bio {
+  color: grey;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  padding-bottom: 2em;
+}
+.info li {
+  padding-bottom: 1em;
+}
+.info .list {
+  display: inline-block;
+  min-width: 120px;
+}
+.info .fact {
+  display: inline-block;
+  padding-left: 1em;
+  color: grey;
+}
+
+.about {
+  padding-left: 4em;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2em 0;
+}
+
+@media (max-width: 1545px) {
+  .aboutme1 {
+    justify-content: center;
+  }
+  .head-shot {
+    display: none;
+  }
+  .head {
+    width: 600px;
+    padding-bottom: 1.5em;
+  }
+  .head h2 {
+    font-size: 2em;
+  }
+  .head .disc {
+    font-size: 1.2em;
+    padding-bottom: 0.8em;
+  }
+}
+@media (max-width: 978px) {
+  .about {
+    width: 70vw;
+    padding: 0;
+  }
+}
+@media (max-width: 866px) {
+  .info {
+    padding-bottom: 2em;
+  }
+  .info ul {
+    display: block;
+  }
+  .info li {
+    padding-bottom: 1em;
+  }
+  .info .list {
+    display: inline-block;
+    min-width: none;
+  }
+  .info .fact {
+    display: inline-block;
+    padding-left: 1em;
+    color: grey;
+  }
+  .cards {
+    font-size: 0.7em;
+  }
+}
 .download, .message-me {
   border: 1px solid #FF3F3F;
   color: white;
@@ -54,37 +253,6 @@
   font-size: 17px;
   margin-left: 30px;
   display: none;
-}
-
-.logo {
-  background-image: url("../../assets/MANNYBOULPFP.png");
-  background-size: contain;
-  background-position: center;
-  height: 40px;
-  width: 200px;
-  background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
-}
-
-.head-shot {
-  background-image: url("../../assets/zoro-pic.png");
-  background-size: contain;
-  background-position: center;
-  height: 500px;
-  width: 400px;
-  background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
-}
-
-.projects img {
-  width: 400px;
-  height: 300px;
-}
-
-.head-img {
-  height: 200px;
 }
 
 /* NEW FOOTER CONTACT FORM */
@@ -300,123 +468,4 @@ select {
 .wrap-label {
   text-align: center;
   padding: 1vh;
-}
-
-html {
-  background-color: #100E0E;
-}
-
-.header, .hero, label, .work, .services, .skills, .test, .contact {
-  padding-left: 15vw;
-  padding-right: 15vw;
-}
-
-.header, .hero, .services, .skills, .skill-percent, .skill-text, .test, .contact {
-  display: flex;
-}
-
-.header {
-  padding-left: 15vw;
-  padding-right: 15vw;
-  height: 10vh;
-  position: relative;
-  align-items: center;
-}
-
-.hero {
-  justify-content: left;
-  margin-top: 5em;
-}
-.hero h1 {
-  font-size: 4em;
-  line-height: 5rem;
-}
-.hero .hello {
-  color: #FF3F3F;
-}
-
-.zoro {
-  padding-bottom: 2.5em;
-  width: 100%;
-}
-
-.bottom-head {
-  display: block;
-}
-
-.slide {
-  width: 50%;
-  text-align: right;
-}
-.slide .selected, .slide .number {
-  display: inline;
-}
-.slide .selected {
-  font-size: 4em;
-  color: #FF3F3F;
-}
-.slide .arrows {
-  display: flex;
-  justify-content: space-between;
-}
-
-label {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-.aboutme1 {
-  padding-left: 15vw;
-  padding-right: 15vw;
-  display: flex;
-  justify-content: right;
-}
-
-.head {
-  width: 600px;
-  padding-bottom: 1.5em;
-}
-.head h2 {
-  font-size: 2em;
-}
-.head .disc {
-  font-size: 1.2em;
-  padding-bottom: 0.8em;
-}
-.head span {
-  color: #FF3F3F;
-}
-.head .bio {
-  color: grey;
-}
-
-.info {
-  display: flex;
-  justify-content: space-between;
-  max-width: 600px;
-  padding-bottom: 2em;
-}
-.info li {
-  padding-bottom: 1em;
-}
-.info .list {
-  display: inline-block;
-  min-width: 120px;
-}
-.info .fact {
-  display: inline-block;
-  padding-left: 1em;
-  color: grey;
-}
-
-.about {
-  padding-left: 4em;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 2em 0;
 }

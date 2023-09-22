@@ -1,0 +1,60 @@
+@use '../components/images';
+@use '../layout/home';
+//not finished
+@media (max-width: 1545px) { 
+    .aboutme1  {
+        justify-content:center ;
+    }
+    .head-shot {
+        display: none;
+    }
+    .head {
+        width: 600px;
+        padding-bottom: 1.5em;
+        h2 {
+          font-size: 2em;
+        }
+        .disc {
+          font-size: 1.2em;
+          padding-bottom: .8em;
+        }
+    }
+}
+
+@media (max-width: 978px) {
+    // .aboutme1  {
+    //     justify-content:center ;
+    // }
+    .about {
+        width: 70vw;
+        padding: 0;
+    }
+}
+
+@media (max-width: 866px) {
+    .info {
+        padding-bottom: 2em;
+        ul {
+            display: block;
+        }
+        li {
+          padding-bottom: 1em;
+        }
+        .list {
+          display: inline-block;
+          min-width: none;
+        }
+        .fact {
+          display: inline-block;
+          padding-left: 1em;
+          color: grey;
+        }
+      }
+      .cards {
+        font-size: .7em;
+      }
+}
+
+@media (max-width: 716px) {
+
+}

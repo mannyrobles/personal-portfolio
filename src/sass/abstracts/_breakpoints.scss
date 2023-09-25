@@ -64,31 +64,6 @@
     }
 }
 
-// @media (max-width: 866px) {
-//     .info {
-//         padding-bottom: 2em;
-//         ul {
-//             display: block;
-//         }
-//         li {
-//           padding-bottom: 1em;
-//         }
-//         .list {
-//           display: inline-block;
-//           min-width: none;
-//         }
-//         .fact {
-//           display: inline-block;
-//           padding-left: 1em;
-//           color: grey;
-//         }
-//       }
-
-//       .cards {
-//         font-size: .7em;
-//       }
-// }
-//about me 
 @media (max-width: 706px) {
   .header, .hero, label, .work, .services, .skills, .test, .contact, .aboutme1 {
     padding-left: 5vw;
@@ -110,20 +85,6 @@
   .head {
     width: auto;
   }
-  // .projects, .cards, .info {
-  //   display: grid;
-  //   grid-template-columns: 1fr;
-  //   grid-auto-flow: row;
-  //   img {
-  //     @include mixins.img();
-  //     margin: auto;
-  //   }
-  // }
-  // .li {
-  //   display: flex;
-  // }
-  // .list {
-  //   max-width: 100px;
-  // }
+  
 }
 

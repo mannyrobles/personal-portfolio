@@ -72,7 +72,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This project was started to test my web development skills. I went on to dribbble.com to see interesting UX/UI designs for webpages and decided to try and recreate it soley based off of the images of the site itself.
+This project was started to test my web development skills. I went on to dribbble.com to see interesting UX/UI designs for webpages and decided to try and recreate it soley based off of the images of the site itself. This design is rom Zaim Maulana - https://dribbble.com/shots/17989398-Financy-Finance-Landing-Page
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -82,7 +82,7 @@ This project was started to test my web development skills. I went on to dribbbl
 
 * HTML
 * CSS
-
+* JS
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 

@@ -88,6 +88,7 @@ label {
   }
 }
 .info {
+  display: inline-block;
   display: flex;
   justify-content: space-between;
   max-width: 600px;
@@ -113,5 +114,5 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 2em 0;
+  grid-gap: 2em 2em;
 }
